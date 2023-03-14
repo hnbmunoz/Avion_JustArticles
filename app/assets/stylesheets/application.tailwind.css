@@ -11,3 +11,59 @@
 }
 
 */
+.edit-btn {
+  @apply rounded-full border-solid border-2 p-2 bg-blue-400 uppercase text-xs cursor-pointer border-blue-400  ;  
+  color: #1f1f1f;
+  transition: all 0.3s;  
+}
+.edit-btn:hover {
+ color: #fff;
+ background-color: rgba(96, 165, 250,1);
+}
+
+.show-btn {
+  @apply rounded-full border-solid border-2 p-2 bg-green-400 uppercase text-xs cursor-pointer border-green-400  ;  
+  color: #1f1f1f;
+  transition: all 0.3s;  
+}
+.show-btn:hover {
+ color: #fff;
+ background-color: rgba(74, 222, 128,1);
+}
+
+.delete-btn {
+  @apply rounded-full border-solid border-2 p-2 bg-red-400 uppercase text-xs cursor-pointer border-red-400  ;  
+  color: #1f1f1f;
+  transition: all 0.3s;  
+}
+.delete-btn:hover {
+ color: #fff;
+ background-color: rgba(248, 113, 113,1);
+}
+
+.post-btn {
+  /* background-color: #0b0f16 !important; */
+  @apply text-stone-600 border-orange-400 border-solid border-2;
+  height:3rem;
+  width: fit-content;
+  min-width: 7rem;
+  border-radius: 0.625rem;
+  font-weight: bolder;      
+  padding: 0.5rem 1rem;  
+  transition: all 0.3s;  
+  font-family: 'Montserrat';
+}
+
+.post-btn:hover {
+  @apply text-stone-900 border-yellow-400 border-solid border-2;
+  cursor: pointer;    
+  transform: translateY(-0.25rem);    
+  box-shadow: 0 0.5rem 0.5rem -0.4rem rgba(251,146,60,1);
+}
+
+.table-cell {
+  @apply p-2;
+  font-family: 'PT Sans';
+  max-width: 300px !important;
+  text-overflow: ellipsis;
+}
