@@ -1,0 +1,27 @@
+
+<%= form_with scope: :article,class: 'partial-form', url: path, method: method, local: true do | f |%>
+
+  <p>
+    <% if @article.errors.any? %>
+      <ul>
+        <% @article.errors.full_messages.each do | msg |%>
+          <li> <%= msg%> </li>
+        <% end %>
+      </ul>
+    <%end%>
+  </p>
+  <p>
+    <%= f.label :name, :class => 'default-label' %><br/>
+    <%= f.text_field :name, :placeholder => 'Write Article Name', :class => 'default-input'%>
+  </p>
+
+  <p>
+    <%= f.label :body, :class => 'default-label' %><br/>
+    <%= f.text_field :body, :placeholder => 'Article Content', :class => 'default-input'%>
+  </p>
+
+  <p>
+    <%= f.submit 'Save Article', :class => 'post-btn'%>    
+  </p>
+<%end%>
+<%= render "return"%>
