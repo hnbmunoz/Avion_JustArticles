@@ -61,9 +61,48 @@
   box-shadow: 0 0.5rem 0.5rem -0.4rem rgba(251,146,60,1);
 }
 
+.return-btn {
+  /* background-color: #0b0f16 !important; */
+  @apply text-stone-600 border-red-400 border-solid border-2;
+  height:3rem;
+  width: fit-content;
+  min-width: 7rem;
+  border-radius: 0.625rem;
+  font-weight: bolder;      
+  padding: 0.5rem 1rem; 
+  margin: 1rem 2rem; 
+  transition: all 0.3s;  
+  font-family: 'Montserrat';
+}
+
+.return-btn:hover {
+  @apply bg-red-400 text-white;
+}
+
 .table-cell {
   @apply p-2;
   font-family: 'PT Sans';
   max-width: 300px !important;
   text-overflow: ellipsis;
+}
+
+.partial-form {  
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.default-input {
+  @apply focus:outline-0;
+  border: none;
+  border-bottom: 1px solid #1f1f1f;
+  outline: none !important;
+  margin: 1rem
+}
+
+.default-label {
+  @apply text-lg font-bold text-stone-900;
+  font-family: 'PT Sans';
+  margin: 1rem
 }

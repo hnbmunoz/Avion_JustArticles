@@ -1,28 +1,5 @@
-<h1>Edit This Article</h1>
-<%= form_with scope: :article, url: update_article_path, method: :patch, local: true do | f |%>
+<div class="flex-column">
+  <h1>Edit This Article</h1>
+  <%= render "form", path: update_article_path, method: :patch%>
+</div>
 
-  <p>
-    <% if @article.errors.any? %>
-      <ul>
-        <% @article.errors.full_messages.each do | msg |%>
-          <li> <%= msg%> </li>
-        <% end %>
-      </ul>
-    <%end%>
-  </p>
-  <p>
-    <%= f.label :name %><br/>
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
-    <%= f.label :body %><br/>
-    <%= f.text_field :body %>
-  </p>
-
-  <p>
-    <%= f.submit%>
-    
-  </p>
-<%end%>
-<%= button_to "Return to Article List", article_path, method: :get %>
