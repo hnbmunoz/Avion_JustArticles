@@ -1,21 +1,23 @@
 <ArticleIndex class="flex-column">
-  <table>
+  <table class="">
     <thead>
       <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Body</th>
+        <th>Body</th>        
       </tr>
     </thead>
-    <tbody>
+    <tbody >
       <% @articles.each do |article|%>
         <tr>
-          <td><%= article.id%></td>
-          <td><%= article.name%></td>
-          <td><%= article.body%></td>
-          <td> <%= link_to "Modify Article", edit_article_path(article.id) %>  |</td>
-          <td> <%= link_to "Show Article", show_article_path(article.id) %>  |</td>
-          <td><%= button_to "Delete Article", destroy_article_path(article.id), method: :delete , confirm: "Are you sure?" %>  </td>
+          <td class="table-cell"><%= article.id%></td>
+          <td class="table-cell"><%= article.name%></td>
+          <td class="table-cell"><%= article.body%></td>
+          <td class="table-cell"><%= button_to "Modify Article", edit_article_path(article.id), method: :get, class: 'edit-btn' %>  </td>
+          <td class="table-cell"> | </td>
+          <td class="table-cell"><%= button_to "Show Article", show_article_path(article.id),  method: :get, class: 'show-btn ' %>  </td>
+          <td class="table-cell"> | </td>
+          <td class="table-cell"><%= button_to "Delete Article", destroy_article_path(article.id), method: :delete , class: 'delete-btn'%></td>
           <!--  -->
         </tr>
       <%end%>
@@ -23,6 +25,6 @@
   </table>
 
   <div style="margin-top: 1rem;">
-    <%= link_to " Create new Article ", new_article_path %>
+    <%= button_to " Create new Article ", new_article_path, method: :get ,class:'post-btn'%>
   </div>
 </ArticleIndex>
