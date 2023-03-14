@@ -79,6 +79,11 @@
   @apply bg-red-400 text-white;
 }
 
+.table-header{
+  @apply text-2xl font-bold text-stone-600;
+  font-family: 'Montserrat';
+}
+
 .table-cell {
   @apply p-2;
   font-family: 'PT Sans';
@@ -105,4 +110,9 @@
   @apply text-lg font-bold text-stone-900;
   font-family: 'PT Sans';
   margin: 1rem
+}
+
+.error-warning {
+  font-family: 'PT Serif';
+  color: red !important;
 }

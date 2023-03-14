@@ -1,12 +1,25 @@
-<h1>Article Information</h1>
-<div>
-  <p>
-    Name: <%= @article.name%>
-  </p>
-  <p>
-    Body: <%= @article.body%>
-  </p>
-
+<div class='flex flex-col'>
+  <h1 class="container flex p-3 text-2xl font-bold text-stone-600 " style="font-family: Montserrat">Article Information</h1>
+  <div class='flex-column'>
+    <div class="flex-column m-3">
+      <label class='default-label'>
+        Title: 
+      </label>
+      <p class="px-3">
+      <%= @article.name%>
+      </p>
+    </div>
+    <div>
+      <div class="flex-column m-3">
+        <label class='default-label'>
+          Content: 
+        </label>
+        <p class="px-3">
+          <%= @article.body%>
+        </p>
+      </div>
+    </div>
+  </div>
+  <%= render "return"%>
   
 </div>
-<%= link_to "Return to Listing", article_path %>
