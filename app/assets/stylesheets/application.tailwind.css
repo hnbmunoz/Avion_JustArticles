@@ -43,7 +43,7 @@
 
 .post-btn {
   /* background-color: #0b0f16 !important; */
-  @apply text-stone-600 border-orange-400 border-solid border-2 font;
+  @apply text-stone-600 border-orange-400 border-solid border-2;
   height:3rem;
   width: fit-content;
   min-width: 7rem;
